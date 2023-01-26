@@ -11,10 +11,24 @@ app.get("/products", (request, response) => {
   console.log("Get products request sent");
   response.json(products);
 });
+//Users
 app.get("/users", (request, response) => {
-  console.log("Get users request sent");
-  response.status(200).send("Users Response hiilee Hello server");
+  response.json(users);
 });
+
+//Orders
+app.get("/orders", (request, response) => {
+  response.json(orders);
+});
+
+//Moderators
+app.get("/moderators", (request, response) => {
+  response.json(modearators);
+});
+// app.get("/users", (request, response) => {
+//   console.log("Get users request sent");
+//   response.status(200).send("Users Response hiilee Hello server");
+// });
 
 //
 app.listen(port, () => {
@@ -405,3 +419,292 @@ const products = [
     category: "tablets",
   },
 ];
+const users = [
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+  {
+    userId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    order: "2",
+     date: "2023/01/27"
+  },
+]
+
+const orders = [
+  {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  },
+  {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  }, {
+    orderNo: "#15358",
+    date: "2023/01/27",
+    phone: "99999999",
+    email: "sra11schi@example.com",
+    address: "ХУД 4-р хороо",
+    stock: "2",
+    price: "1,477,500",
+    payment: "Картаар"
+     
+  },
+]
+const modearators = [
+  {
+    modId: "#15358",
+    surname: "Батравдан",
+    givenname: "Cарангэрэл",
+    email: "sra11schi@example.com",
+    phone: "99999999",
+    solditem: "2",
+     date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+{
+  modId: "#15358",
+  surname: "Батравдан",
+  givenname: "Cарангэрэл",
+  email: "sra11schi@example.com",
+  phone: "99999999",
+  solditem: "2",
+   date: "2023/01/27"
+},
+]
