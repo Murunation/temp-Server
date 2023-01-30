@@ -1,9 +1,12 @@
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
+const { response } = require("express");
 
 const port = 4000;
 const app = express();
 app.use(cors());
+app.use(bodyParser.json());
 
 //This is Backend router
 //API access point interface
@@ -11,8 +14,42 @@ app.get("/products", (request, response) => {
   console.log("Get products request sent");
   response.json(products);
 });
+
+//id
+app.get("/product/:id", (request, require)=>{
+  const prodId = request.params.id;
+  const foundProduct = products.find((product)=> product.id === prodId);
+  if (foundProduct) {
+    response.json(foundProduct);
+  } else {
+    response.status(404).send({message: "Product not found"});
+  }
+});
+
+//Post req
+app.post("/add", (request, response)=>{
+  console.log("Post req orj irlee: ", request.body);
+  const newProduct = {
+    id: (products.length + 1).toString(),
+    ...request.body,
+  };
+  products.push(newProduct);
+  console.log("products: ", products);
+});
+
+//Product delete
+app.delete("/product/:id", (request, response)=>{
+  const id = request.params.id;
+  console.log("Delete huselt orj irlee id: ", id);
+  products = products.filter((product)=> product.id !== id);
+  console.log("Product: ", products);
+});
+
 //Users
 app.get("/users", (request, response) => {
+  console.log("Get products huselt orj irsen shhuu bronnj");
+  response.send("za oilgoloo");
+  response.status(200).send("products bla bla");
   response.json(users);
 });
 
@@ -32,10 +69,10 @@ app.get("/moderators", (request, response) => {
 
 //
 app.listen(port, () => {
-  console.log(`Server is starting in ${port} port`);
+  console.log(`Server is started in ${port} port`);
 });
 
-const products = [
+let products = [
   {
     description:
       "Customize a Samsung Bespoke 3- or 4-door French door refrigerator or 4-Door Flex refrigerator with panels available in multiple colors and finishes. Plus, shop for matching appliances.",
