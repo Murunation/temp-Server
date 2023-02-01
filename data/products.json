@@ -11,21 +11,6 @@
     "category": "appliances"
   },
   {
-    "name": "HP Elitebook 840",
-    "spec": [
-      { "DisplaySize": "14\"", "CPU": "i5-6300U 2,4 GHZ" },
-      { "HardDrive": "1Tb SSD" },
-      { "RAM": "16GB" }
-    ],
-    "id": "ea5e3b6c",
-    "image": "https://i.ebayimg.com/images/g/E8wAAOSwO9Bjmd1t/s-l1600.jpg",
-    "description": "Used: An item that has been used previously. The item may have some signs of cosmetic wear, but is fully operational and functions as intended. This item may be a floor model or store return that has been used. See the seller’s listing for full details and description of any imperfections. ",
-    "price": 180,
-    "stock": 29,
-    "sale": 0,
-    "category": "computers & tablets"
-  },
-  {
     "name": "HP Probook 430",
     "spec": [
       { "DisplaySize": "13\"" },
@@ -227,17 +212,6 @@
     "category": "gaming console"
   },
   {
-    "description": "Fast-heating electric glass carafe kettle for quickly and conveniently boiling water",
-    "spec": [{ "height": "8.27 inches" }, { "audio": "4.92inches" }],
-    "name": "Basics Electric Glass and Steel Kettle",
-    "id": "92fadc2a",
-    "image": "https://m.media-amazon.com/images/I/61JS5e82ayL._AC_SX679_.jpg",
-    "price": 24,
-    "stock": 17,
-    "sale": 15,
-    "category": "appliance"
-  },
-  {
     "description": "Celestron PowerSeeker 127EQ Telescope - 20mm Erect-Image Eyepiece - 4mm Eyepiece - 3x Barlow Lens - Star Pointer Finder - Equatorial Head - 2x Slow-Motion Cables - Adjustable-Height Tripod - Counterweight Bar - 7.5 lbs Counterweight - Download Code - Original Box",
     "spec": [{ "height": "8.46 inches" }, { "width": "16.73 inches" }],
     "name": "​​Celestron - PowerSeeker 127EQ Telescope",
@@ -356,5 +330,20 @@
     "stock": 4,
     "sale": 0.1,
     "category": "tablets"
+  },
+  {
+    "id": "20",
+    "name": "IPad 10",
+    "price": "900$",
+    "stock": "100",
+    "sale": "10",
+    "cap": "256GB",
+    "elect": "10",
+    "voltage": "220",
+    "size": "10",
+    "expDate": "2024",
+    "descrip": "Ipad",
+    "category": "ГАР УТАС, ЦАГ",
+    "brand": "IPHONE"
   }
 ]
