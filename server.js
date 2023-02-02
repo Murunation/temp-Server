@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { response } = require("express");
+const { response, json } = require("express");
 const fs = require("fs");
 const e = require("express");
+const { request } = require("http");
 
 const port = 4000;
 const app = express();
@@ -85,7 +86,7 @@ app.delete("/products/:id", (request, response) => {
           } else {
             response
               .status(200)
-              .status({ message: "Product added successfuly" });
+              .status({ message: "Product added successfully" });
           }
         }
       );
@@ -93,6 +94,32 @@ app.delete("/products/:id", (request, response) => {
   });
 
   // console.log("Product: ", products);
+});
+//APP PUT
+app.put("/products/:id", (request, response) => {
+  fs.readFile("./data/products.json", (error, data) => {
+    if (error) {
+      response.status(500).send({ message: error });
+    } else {
+      //
+      let data = JSON.parse(products);
+      let product = data.find((product) => product.id == request.params.id);
+      data[data.indexOf(product)] = request.body;
+      fs.writeFile(
+        "./data/products.json",
+        JSON.stringify(products),
+        (error) => {
+          if (error) {
+            response.status(500).send({ message: error });
+          } else {
+            response
+              .status(200)
+              .status({ message: "Product edited successfully." });
+          }
+        }
+      );
+    }
+  });
 });
 
 //Users
