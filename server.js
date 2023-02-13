@@ -134,14 +134,16 @@ app.delete("/products/:id", (request, response) => {
 });
 //APP PUT
 app.put("/products/:id", (request, response) => {
+  console.log(request.body);
+  console.log("Pur  req orj irlee");
   fs.readFile("./data/products.json", (error, data) => {
     if (error) {
       response.status(500).send({ message: error });
     } else {
       //
-      let data = JSON.parse(products);
-      let product = data.find((product) => product.id == request.params.id);
-      data[data.indexOf(product)] = request.body;
+      let products = JSON.parse(data);
+      let product = products.find((product) => product.id == request.params.id);
+      products[products.indexOf(product)] = request.body;
       fs.writeFile(
         "./data/products.json",
         JSON.stringify(products),
