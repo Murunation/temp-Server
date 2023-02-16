@@ -49,6 +49,27 @@ app.get("/users", (request, response) => {
     }
   });
 });
+//
+app.post("/users", (req, res) => {
+  let id = uuidv4().slice(0, 4);
+  console.log(id);
+  req.body.id = id;
+  fs.readFile("./data/users.json", (err, users) => {
+    if (err) {
+      res.status(500).send({ message: err });
+    } else {
+      let user = JSON.parse(users);
+      user.unshift(req.body);
+      fs.writeFile("./data/users.json", JSON.stringify(user), (err) => {
+        if (err) {
+          res.status(500).send({ message: "not working" });
+        } else {
+          res.status(200).send({ message: "working " });
+        }
+      });
+    }
+  });
+});
 //Moderator request//
 app.get("/moderators", (request, response) => {
   fs.readFile("./data/moderators.json", (err, data) => {
